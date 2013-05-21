@@ -19,7 +19,7 @@ public class YellowBookTest {
 	public  void testYell() throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		WebDriver driver = new HtmlUnitDriver();
+		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		
 	
