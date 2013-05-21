@@ -21,13 +21,7 @@ public class YellowBookTest {
 
 		WebDriver driver = new HtmlUnitDriver();
 		driver.get("http://www.google.com");
-		//driver.getTitle();
-       Thread.sleep(10000);
-		driver.findElement(By.xpath(".//*[@id='username']")).sendKeys("srinivasan.velusamy@photoninfotech.net.photon");
-		driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("Me@ph0t0n");
-		driver.findElement(By.xpath(".//*[@id='Login']")).click();
-		new WebDriverWait(driver,40).until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='home_Tab']/a")));
-		driver.quit();
+		
 	
 	}
 
