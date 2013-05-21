@@ -18,12 +18,12 @@ public class YellowBookTest {
 		// TODO Auto-generated method stub
 
 		WebDriver driver = new FirefoxDriver();
-		driver.get("http://www.google.com");
+		
 		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 		String browserName = caps.getBrowserName();
 		String browserVersion = caps.getVersion();
 		System.out.println(browserName+" "+browserVersion);
-      
+      driver.get("http://www.google.com");
 	
 	}
 
