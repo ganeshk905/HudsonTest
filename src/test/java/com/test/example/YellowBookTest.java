@@ -19,8 +19,8 @@ public class YellowBookTest {
 	public  void testYell() throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		WebDriver driver = new FirefoxDriver();
-		driver.get("https://c.cs6.visual.force.com/apex/ScheduleSendDailyStrategicUpdate");
+		WebDriver driver = new HtmlUnitDriver();
+		driver.get("http://www.google.com");
 		//driver.getTitle();
        Thread.sleep(10000);
 		driver.findElement(By.xpath(".//*[@id='username']")).sendKeys("srinivasan.velusamy@photoninfotech.net.photon");
