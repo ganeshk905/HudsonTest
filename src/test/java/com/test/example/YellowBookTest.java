@@ -3,6 +3,7 @@ package com.test.example;
 import org.junit.Test;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -16,7 +17,7 @@ public class YellowBookTest {
 	public  void testYell() throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		WebDriver driver = new HtmlUnitDriver();
+		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 		String browserName = caps.getBrowserName();
