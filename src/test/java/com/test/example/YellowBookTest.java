@@ -21,7 +21,7 @@ public class YellowBookTest {
 
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
-		
+		System.out.println(selenium.getEval("navigator.userAgent;"));
 	
 	}
 
