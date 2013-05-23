@@ -17,13 +17,18 @@ public class YellowBookTest {
 	public  void testYell() throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		WebDriver driver = new FirefoxDriver();
-		
-		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
-		String browserName = caps.getBrowserName();
-		String browserVersion = caps.getVersion();
-		System.out.println(browserName+" "+browserVersion);
-      driver.get("http://www.google.com");
+		URL server = new URL("http://127.0.0.1:4444/wd/hub");
+		 
+	    DesiredCapabilities capabilities = new DesiredCapabilities();
+	    capabilities.setBrowserName("firefox");
+	 
+	    System.out.println("Connecting to " + server);
+	 
+	    WebDriver driver = new RemoteWebDriver(server, capabilities);
+	 
+	    driver.get("http://www.google.com");
+	 
+	    driver.quit();
 	
 	}
 
