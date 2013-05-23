@@ -1,10 +1,10 @@
 package com.test.example;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.junit.Test;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -12,25 +12,25 @@ public class YellowBookTest {
 
 	/**
 	 * @param args
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 */
 	@Test
-	public  void testYell() throws InterruptedException {
+	public void testYell() throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		URL server = new URL("http://127.0.0.1:4444/wd/hub");
-		 
-	    DesiredCapabilities capabilities = new DesiredCapabilities();
-	    capabilities.setBrowserName("firefox");
-	 
-	    System.out.println("Connecting to " + server);
-	 
-	    WebDriver driver = new RemoteWebDriver(server, capabilities);
-	 
-	    driver.get("http://www.google.com");
-	 
-	    driver.quit();
-	
+		DesiredCapabilities capabillities = DesiredCapabilities.htmlUnit();  
+        capabillities.setCapability("version", "8");  
+        capabillities.setCapability("platform", Platform.WINDOWS);
+
+		WebDriver driver = new FirefoxDriver(capabillities);
+
+		
+
+		// And now use it
+		driver.get("http://www.google.com");
+
+		driver.quit();
+
 	}
 
 }
